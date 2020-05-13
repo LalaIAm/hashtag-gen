@@ -16,8 +16,15 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     devServer: {
+        historyApiFallback: true,
+        proxy: {
+            '/api': 'http://localhost:3000',
+        },
+        open: true,
+        compress: true,
         contentBase: './dist',
-        hot: true
+        hot: true,
+        port: 8080
     },
     module: {
         rules: [

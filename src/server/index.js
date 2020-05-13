@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 require('dotenv').config();
 
+const router = require('./api');
+
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -20,3 +22,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server listening at http://localhost:${PORT}`)
 })
+
+app.use('/api', router);

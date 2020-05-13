@@ -5,26 +5,23 @@
     <meta charset="utf-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Hashtag Generator</title>
-   
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
-        <div class="">
-            Logo
-        </div>
-        <div class="">
-            navigation
-        </div>
+        <h1>Article Analyzer</h1>
+        
     </header>
 
     <main>
         <section>
-            <form class="" onsubmit="return handleSubmit(event)">
-                <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                <input type="submit" name="" value="submit" onclick="return handleSubmit(event)"
-                    onsubmit="return handleSubmit(event)">
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <h2>Enter A URL</h2>
+                <input id="url" type="text" name="url" placeholder="url">
+                <input type="submit" name="" id='submit' value="submit" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return Client.handleSubmit(event)">
             </form>
             <section>
 
