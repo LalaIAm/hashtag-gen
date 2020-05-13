@@ -1,3 +1,5 @@
+const resultDiv = document.getElementById('results');
+
 const processResults = (result) => {
     let hashtags;
     let sentiment;
@@ -18,6 +20,10 @@ const processResults = (result) => {
     }
 
     return { hashtags, sentiment, summary };
+}
+
+const createHashtags = (hashtags) => {
+    
 }
 
 export { processResults };

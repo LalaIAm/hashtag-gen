@@ -1,10 +1,15 @@
 const submit = document.getElementById('submit');
 
+const getUrl = () => {
+  const url = document.getElementById('url').value
+  return url
+}
+
 const handleSubmit = async (event) => {
   event.preventDefault();
 
   // check what text was put into the form field
-  let url = document.getElementById('url').value;
+  let url = getUrl();
 
   console.log('::: Form Submitted :::');
 
@@ -32,6 +37,6 @@ const handleSubmit = async (event) => {
 
 };
 
-submit.addEventListener('click', handleSubmit);
 
-export { handleSubmit };
+
+export { handleSubmit, getUrl, submit };
