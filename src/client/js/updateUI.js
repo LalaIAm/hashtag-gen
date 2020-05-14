@@ -22,8 +22,14 @@ const processResults = (result) => {
     return { hashtags, sentiment, summary };
 }
 
+const updateTitle = (url) => {
+    const title = document.getElementById('results-title')
+    title.textContent = url
+}
+
 const createHashtags = (hashtags) => {
+
     
 }
 
-export { processResults };
+export { processResults, updateTitle };

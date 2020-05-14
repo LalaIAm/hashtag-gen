@@ -29,7 +29,8 @@ const handleSubmit = async (event) => {
     .then((response) => response.json())
     .then((result) => {
       console.log('result: ', result)
-      Client.processResults(result)
+      Client.processResults(result);
+      Client.updateTitle(url)
     })
 
     .catch((error) => console.log('error: ', error));
