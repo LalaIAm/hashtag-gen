@@ -1,0 +1,22 @@
+#results-section {
+    height: 0px;
+    background: linear-gradient(45deg, #2c6599, #2fbbaf);
+    margin-top: 2rem;
+    box-shadow: 2px 5px 8px rgba(0,0,0,0.3), 5px 3px 19px rgba(0,0,0,0.9), inset 2px 2px 3px rgba(150,150,150,0.08);
+    border-radius: 10px;
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        display: none;
+        font-size: 1.3rem;
+        padding: .5rem;
+    }
+
+    li {
+        font-family: 'Lato';
+        font-size: 1rem;
+    }
+}
