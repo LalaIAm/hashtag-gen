@@ -1,23 +1,21 @@
 describe('update the UI', () => {
-    it('displays the input url', () => {
-        document.body.innerHTML = `
-        <input id="url" type="text">
+  it('displays the hashtag  results', () => {
+    document.body.innerHTML = `
+        <input id="url" type="text" name="url">
         <button type="submit" id="submit">
-        <h2 id="results-title></h2>`;
+      <ul id="hashtag-list"></ul>`;
 
-        require('../src/client/js/updateUi')
-        require('../src/client/js/formHandler')
+    require('../src/client/js/formHandler');
+    require('../src/client/js/updateUI');
 
-        const urlInput = document.getElementById('url');
-        const submitBtn = document.getElementById('submit');
+    const urlInput = document.getElementById('url');
+    const submitBtn = document.getElementById('submit');
+    const hashtags = document.getElementById('hashtag-list');
 
+    urlInput.textContent = 'https://flaviocopes.com/jest/';
 
-        urlInput.value = "https://google.com";
+    submitBtn.click();
 
-        submitBtn.click();
-        const title = document.getElementById('results-title');
-
-
-        expect(title.textContent).toBe("https://google.com")
-    })
-})
+    expect(hashtags.innerHTML).not.toBeUndefined();
+  });
+});
