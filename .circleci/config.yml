@@ -10,7 +10,18 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
-            - run: npm test
+            - run: 
+              name: Install JUnit coverage reporter
+              command: npm install -D jest-junit
+            - run: 
+              name: Run tests with reporter
+              command: jest --ci --runInBand --reporters=default --reporters=jest-junit
+              environment:
+                JEST_JUNIT_OUTPUT_DIR: ./reports/junit/
+            - store_test_results:
+              path: ./reports/junit/
+            - store_artifacts:
+              path: /reports/junit/
 workflows:
     build-and-test:
       jobs:
