@@ -66,8 +66,7 @@
   "jest": {
     "coveragePathIgnorePatterns": [
       "/node_modules/"
-    ],
-    "testResultsProcessor": "jest-junit"
+    ]
   },
   "jest-junit": {
     "suiteName": "jest tests",
