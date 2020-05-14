@@ -5,7 +5,7 @@
   "main": "src/client/index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack --mode production --config webpack.server.config.js && webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
     "heroku-postbuild": "webpack -p",
     "build-dev": "webpack-dev-server --config webpack.dev.js --open",
     "start": "node src/server/server.js",
