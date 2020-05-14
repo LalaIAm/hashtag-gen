@@ -55,5 +55,12 @@
     <footer>
       <p id='copyright'>&copy; Article Analyzer 2020.</p>
     </footer>
+    <script>
+      if('serviceWorker' in navigator){
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+        })
+      }
+    </script>
   </body>
 </html>
