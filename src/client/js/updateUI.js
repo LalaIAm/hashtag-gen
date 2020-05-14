@@ -18,7 +18,9 @@ const processResults = (result) => {
       displaySentiment(sentiment);
     } else if ((result[i].endpoint = 'summarize')) {
       summary = result[i].result.sentences;
-      console.log('summary: ', summary);
+        console.log('summary: ', summary);
+        
+        displaySummary(summary);
     }
   }
 
@@ -67,4 +69,21 @@ const displaySentiment = (sentiment) => {
   sentimentList.appendChild(pLi);
 };
 
-export { processResults, updateTitle, createHashtags, displaySentiment };
+const displaySummary = (summary) => {
+    const summaryTitle = document.getElementById('summary-title')
+    const summaryText = document.getElementById('summary-text');
+
+    summaryTitle.style.display = 'inline-block';
+
+    while (summaryText.hasChildNodes()) {
+        summaryText.removeChild(summaryText.firstChild)
+    }
+
+    for (let i = 0; i < summary.length; i++){
+        const p = document.createElement('p');
+        p.textContent = summary[i];
+        summaryText.appendChild(p);
+    }
+}
+
+export { processResults, updateTitle, createHashtags, displaySentiment, displaySummary };
