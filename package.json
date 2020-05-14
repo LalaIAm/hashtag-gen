@@ -5,7 +5,7 @@
   "main": "src/client/index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --mode production --config webpack.server.config.js && webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server --config webpack.dev.js --open",
     "start": "node src/server/server.js",
     "dev": "nodemon src/server/server.js",
@@ -62,7 +62,8 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "webpack-node-externals": "^1.7.2"
   },
   "jest": {
     "coveragePathIgnorePatterns": [
