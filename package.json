@@ -11,7 +11,8 @@
     "dev": "nodemon src/server/server.js",
     "debug": "nodemon --inspect src/server/server.js",
     "all": "npm-run-all --parallel \"build-dev\" \"dev\"",
-    "debug-all": "npm-run-all --parallel \"build-dev\" \"debug\""
+    "debug-all": "npm-run-all --parallel \"build-dev\" \"debug\"",
+    "postinstall": "npm build"
   },
   "repository": {
     "type": "git",
