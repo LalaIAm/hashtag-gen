@@ -38,6 +38,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './src/client/views/index.html',
       filename: './index.html',
+      excludeChunks: ['server']
     }),
       new MiniCssExtractPlugin({ filename: '[name].css' }),
     new WorkboxPlugin.GenerateSW()
