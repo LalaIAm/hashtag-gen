@@ -21,6 +21,6 @@ jobs:
             JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
           command: yarn test --ci --reporter="jest-junit"
       - store_test_results:
-          path: reports/junit
+          path: test-results
       - store_artifacts:
-          path: reports/junit
+          path: test-results/artifacts
